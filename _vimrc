@@ -3,6 +3,8 @@ set backspace=indent,eol,start
 set tabstop=3 softtabstop=3 shiftwidth=3 noexpandtab smartindent
 set lines=50 columns=150
 set number
+" stop ex mode
+nnoremap Q <nop>
 " Backup settings
 set dir=C:\\temp\\
 set backupdir=C:\\temp\\
@@ -17,8 +19,11 @@ set foldlevelstart=10
 
 " Search Config
 set incsearch " incremental pattern matching
-nnoremap / :set nohls<cr>/
-nnoremap ? :set hls<cr>/
+set hls
+nnoremap <leader>hs :noh<CR>
+nnoremap <CR> :noh<CR><CR>
+"nnoremap / :set nohls<cr>/
+"nnoremap ? :set hls<cr>/
 
 set encoding=utf8
 "set list
